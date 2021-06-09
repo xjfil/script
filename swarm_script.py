@@ -15,7 +15,7 @@ def get_disk_size(path):
     used = 0
     try:
         disk_total_str = os.popen("df -P " + path + " | awk 'NR==2{print $2}'").readlines()[0]
-        disk_used_str = os.popen("df -P " + path + " | awk 'NR==2{print $4}'").readlines()[0]
+        disk_used_str = os.popen("df -P " + path + " | awk 'NR==2{print $3}'").readlines()[0]
         total = int(disk_total_str)
         used = int(disk_used_str)
     except Exception as e:
