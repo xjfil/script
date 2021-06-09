@@ -91,7 +91,6 @@ def main() -> None:
             continue
         try:
             vol = vols[0].split(":")[0]
-            print(total_and_used["bee-0"])
             total, used = total_and_used[vol]
             cheques_count, uncashed = get_cheque(url_port)
             peers = get_peers(url_port)
